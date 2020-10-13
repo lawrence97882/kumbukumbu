@@ -1,9 +1,9 @@
 //
 //The current events available to this site include
-type moment= "obituary"|"concert"|"wedding"|"launch";
+export type moment= "obituary"|"concert"|"wedding"|"launch";
 //
 //The social media platforms we are to work on are 
-type media ="facebook"|"messages"|"whatap"|"twitter"|"instagram"
+ export type media ="facebook"|"messages"|"whatap"|"twitter"|"instagram"
 //
 //This is the location where an event took place has 
 //atleast three compulsory sections county, district and
@@ -11,7 +11,7 @@ type media ="facebook"|"messages"|"whatap"|"twitter"|"instagram"
 //district and the country 
 //Cases where they are not known the name of the closest towns 
 //name can be repeated
-interface loc{
+export interface loc{
     country?:string;
     county:string;
     sub_county?:string;
@@ -22,14 +22,13 @@ interface loc{
 //
 //node is the super class that allows all its child classes with the ability 
 //to query the database using node js 
-class node{
+export class node{
     //
     //
     constructor(){
     }
     //
     //This function provides a platform for quering the database.
-    
     query(){
         //
         var mysql = require('mysql');
@@ -55,7 +54,7 @@ class node{
 //The when the event took place is charactarised by the start_date, end_date,
 //or the duration of time it took place 
 //The optional end date shows the event took place for a single day
-interface when{
+export interface when{
     date:Date
     from:TimeRanges
     end_date?:Date
@@ -65,7 +64,7 @@ interface when{
 //With the basic common notion of what, when, where, why, any
 //memrable short description for the occasion and an array of 
 //picture taken to show the world. 
-class get_together{
+export class get_together{
     //
     //The occasion signifies the what. What is to be remembered 
     public occasion:moment;
@@ -119,11 +118,11 @@ class get_together{
 //
 //Type describe is a descriptive type for a string of atmost 100 
 //characters. Research on how to limit its length to 100 characters
-type describe=string;
+export type describe=string;
 //
 //The major memory saved in this kumbukumbu platform is the obituary
 //this class extents a kumbukumbu with the eulogy and the bereaved family
-class obituary extends get_together{
+export class obituary extends get_together{
     //
     //The name of the deseased person 
     public name:string
@@ -139,7 +138,7 @@ class obituary extends get_together{
 //
 //This is the short story of the deseased. Has the various sections each of type 
 //describe not exceeding words.
-class eulogy{
+export class eulogy{
     //
     public birth?:describe;
     public education?:describe;
@@ -156,7 +155,7 @@ class eulogy{
 }
 //
 //
-class occasion extends get_together{
+export class occasion extends get_together{
     //
     //
     constructor(name:moment,location:loc,When:when,why?:describe){
@@ -164,5 +163,3 @@ class occasion extends get_together{
     }
 
 }
-//
-//

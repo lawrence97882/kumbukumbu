@@ -6,6 +6,24 @@ html {
     box-sizing: border-box;
 }
 
+/* content setting */
+.content{
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f1f3f8;
+    width: 100%;
+}
+/* styling of the adverts part  */
+.sider{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    height: 100%;
+    width: 20%;
+    justify-content: space-around;
+}
 body {
     /* set the margin to 0px */
     margin: 0px;
@@ -16,39 +34,13 @@ body {
     box-sizing: border-box;
 }
 
-/* The navigator options are here */
-.first_section {
-    position: -webkit-sticky;
-    position: fixed;
+.second_section {
+    background-color: #f1f3f8;
     display: flex;
-    flex-direction: row;
-    height: 15%;
-    top: 0%;
+    flex-direction: column;
     width: 100%;
+    height: 550px;
     justify-content: space-around;
-    box-shadow: 0 4px 6px -1px rgba(8, 8, 8, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    align-items: center;
-}
-
-.logo img {
-    width: 180px;
-    height: 90px;
-}
-
-/*The logo div operation  */
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-start;
-    width: 40%;
-    justify-content: space-between;
-}
-
-.logo span {
-    font-family: 'Crimson Text', serif;
-    text-decoration: none;
-    color: #00ACC1;
-    font-size: 35px;
 }
 
 .dropdown {
@@ -91,39 +83,6 @@ body {
     display: block;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px 1px;
-    width: 40%;
-    align-items: center;
-    height: 50px;
-}
-
-.navbar a {
-    font-family: 'Crimson Text', serif;
-    text-decoration: none;
-    color: #393b44;
-    font-size: 28px;
-}
-
-a:hover {
-    background-color: #393b44;
-    color: white;
-    transition: all 0.4s ease-in;
-    opacity: 1;
-}
-
-.second_section {
-    display: flex;
-    flex-direction: column;
-    background-color: #f1f3f8;
-    height: 600px;
-    width: 100%;
-    justify-content: space-around;
-}
-
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
@@ -157,29 +116,31 @@ input[type=text]:focus {
 }
 
 .events {
-    margin-top: -5%;
+    margin-right: 6%;
+    margin-top: -8%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    height: 50%;
+    align-items: center;
 }
 
 .events img {
+    height: 290px;
+    width: 220px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 400px;
-    height: 300px;
 }
 
+.events img:hover {
+    box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.2);
+}
+/* styling of the container of the cards */
 .third_section {
-    margin-top: 9%;
     display: flex;
     flex-direction: column;
     background-color: #f1f3f8;
-    height: 800px;
-    width: 100%;
-    justify-content: space-around;
+    width: 80%;
+   margin-left: 20%;
 }
 
 .texts {
@@ -190,12 +151,14 @@ input[type=text]:focus {
 }
 
 .event {
-    margin-top: -20%;
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: -8%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
-    height: 50%;
+    width: 90%;
+    align-items: center;
 }
 
 .card {
@@ -204,10 +167,6 @@ input[type=text]:focus {
     margin: auto;
     text-align: center;
     font-family: arial;
-    border-radius: 5px;
-}
-
-.card {
     border-radius: 5px;
 }
 
@@ -261,80 +220,4 @@ a:hover {
 .advert span {
     font-size: 30px;
     color: #393b44;
-}
-
-/* The footer operations are here */
-.sixth_section {
-    margin-top: 50%;
-    display: flex;
-    flex-direction: row;
-    background-color: #393b44;
-    height: 15%;
-    width: 100%;
-    padding: 10px 10px;
-    justify-content: space-around;
-}
-
-.quick_links {
-    display: flex;
-    flex-direction: column;
-    height: 45%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.quick_links a {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Crimson Text', serif;
-    text-decoration: none;
-    color: #f1f3f8;
-    font-size: 28px;
-}
-
-.quick_links span {
-    color: #f1f3f8;
-    font-family: 'Crimson Text', serif;
-    text-decoration: none;
-    font-size: 35px;
-}
-
-.footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 45%;
-    justify-content: space-between;
-}
-
-.footer-center span {
-    font-size: 35px;
-    color: #f5f1da;
-    font-weight: normal;
-}
-
-.footer-center a {
-    color: #f5f1da;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 27px;
-}
-
-.fa {
-    height: 20%;
-    font-size: 60px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.fa-facebook {
-    color: #f5f1da;
-}
-
-.fa-twitter {
-    color: #f5f1da;
-}
-
-.fa-google {
-    color: #f5f1da;
 }
